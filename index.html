@@ -289,7 +289,25 @@ allowfullscreen>
 Mountain Ski Simulator © 2026
 
 </div>
+<script>
 
+function showLang(lang){
+
+const blocks = document.querySelectorAll('.langblock');
+
+blocks.forEach(function(block){
+block.style.display='none';
+});
+
+document.getElementById(lang).style.display='block';
+
+}
+
+window.onload=function(){
+showLang('ru');
+};
+
+</script>
 </body>
 </html>
 
