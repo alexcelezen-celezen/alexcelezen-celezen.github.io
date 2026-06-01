@@ -1,4 +1,279 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>Mountain Ski Simulator</title>
+
+<style>
+body{
+font-family:Arial,sans-serif;
+margin:0;
+padding:0;
+background:#f4f6f9;
+color:#222;
+}
+
+header{
+background:#1e3c72;
+color:white;
+text-align:center;
+padding:20px;
+}
+
+marquee{
+background:#ffeb3b;
+padding:10px;
+font-size:18px;
+font-weight:bold;
+}
+
+.lang-buttons{
+text-align:center;
+margin:20px;
+}
+
+.lang-buttons button{
+padding:10px 20px;
+margin:5px;
+font-size:16px;
+cursor:pointer;
+border:none;
+border-radius:5px;
+background:#1e3c72;
+color:white;
+}
+
+.langblock{
+display:none;
+padding:20px;
+max-width:1200px;
+margin:auto;
+background:white;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+margin-top:20px;
+}
+
+th{
+background:#1e3c72;
+color:white;
+padding:12px;
+border:1px solid #999;
+}
+
+td{
+padding:12px;
+border:1px solid #999;
+}
+
+a{
+color:#003399;
+font-weight:bold;
+text-decoration:none;
+}
+
+.video{
+text-align:center;
+margin:30px 0;
+}
+
+iframe{
+max-width:100%;
+}
+
+footer{
+background:#1e3c72;
+color:white;
+text-align:center;
+padding:20px;
+margin-top:30px;
+}
+</style>
+
+<script>
+function showLang(lang){
+
+document.querySelectorAll('.langblock')
+.forEach(el=>el.style.display='none');
+
+document.getElementById(lang).style.display='block';
+}
+
+window.onload=function(){
+showLang('ru');
+}
+</script>
+
+</head>
+
+<body>
+
+<marquee>
+Я чайник, несусь с горы как булыжник, но тот который во мне сидит, считает что я горнолыжник.
+|
+Я чайник, мчу з гори як камінь, але той, хто сидить усередині мене, вважає себе лижником.
+|
+Ich bin ein Teekessel, ich rase den Berg hinunter wie ein Felsbrocken, aber derjenige in mir hält sich für einen Skifahrer.
+|
+I'm a kettle rushing down the mountain like a boulder, but the one inside me thinks he's a skier.
+</marquee>
+
+<header>
+<h1>Mountain Ski Simulator</h1>
+<h2>Professional Ski Training Simulator</h2>
+</header>
+
+<div class="lang-buttons">
+<button onclick="showLang('ru')">Русский</button>
+<button onclick="showLang('ua')">Українська</button>
+<button onclick="showLang('de')">Deutsch</button>
+<button onclick="showLang('en')">English</button>
+</div>
+
+<!-- РУССКИЙ -->
+
+<div id="ru" class="langblock">
+
+<h2>Документация</h2>
+
+<table>
+
+<tr>
+<th>№</th>
+<th>Документ</th>
+</tr>
+
+<tr><td>1</td><td><a href="ССЫЛКА_РУС_ПОЯСНИТЕЛЬНАЯ">Пояснительная записка</a></td></tr>
+<tr><td>2</td><td><a href="ССЫЛКА_РУС_ПРЕЗЕНТАЦИЯ">Презентация</a></td></tr>
+<tr><td>3</td><td><a href="ССЫЛКА_РУС_СБОРКА">Инструкция по сборке</a></td></tr>
+<tr><td>4</td><td><a href="ССЫЛКА_РУС_НАСТРОЙКА">Настройка тренажёра</a></td></tr>
+<tr><td>5</td><td><a href="ССЫЛКА_РУС_ТЕХПАСПОРТ">Технический паспорт</a></td></tr>
+<tr><td>6</td><td><a href="ССЫЛКА_РУС_АНАЛИЗ">Анализ оборудования</a></td></tr>
+<tr><td>7</td><td><a href="ССЫЛКА_РУС_ТБ">Техника безопасности</a></td></tr>
+<tr><td>8</td><td><a href="ССЫЛКА_РУС_ИСПЫТАНИЯ">Лабораторные испытания</a></td></tr>
+
+</table>
+
+</div>
+
+<!-- УКРАИНСКИЙ -->
+
+<div id="ua" class="langblock">
+
+<h2>Документація</h2>
+
+<table>
+
+<tr>
+<th>№</th>
+<th>Документ</th>
+</tr>
+
+<tr><td>1</td><td><a href="ССЫЛКА_УКР_1">Пояснювальна записка</a></td></tr>
+<tr><td>2</td><td><a href="ССЫЛКА_УКР_2">Презентація</a></td></tr>
+<tr><td>3</td><td><a href="ССЫЛКА_УКР_3">Інструкція зі складання</a></td></tr>
+<tr><td>4</td><td><a href="ССЫЛКА_УКР_4">Налаштування тренажера</a></td></tr>
+<tr><td>5</td><td><a href="ССЫЛКА_УКР_5">Технічний паспорт</a></td></tr>
+<tr><td>6</td><td><a href="ССЫЛКА_УКР_6">Аналіз обладнання</a></td></tr>
+<tr><td>7</td><td><a href="ССЫЛКА_УКР_7">Техніка безпеки</a></td></tr>
+<tr><td>8</td><td><a href="ССЫЛКА_УКР_8">Лабораторні випробування</a></td></tr>
+
+</table>
+
+</div>
+
+<!-- НЕМЕЦКИЙ -->
+
+<div id="de" class="langblock">
+
+<h2>Dokumentation</h2>
+
+<table>
+
+<tr>
+<th>Nr.</th>
+<th>Dokument</th>
+</tr>
+
+<tr><td>1</td><td><a href="ССЫЛКА_DE_1">Erläuterungsbericht</a></td></tr>
+<tr><td>2</td><td><a href="ССЫЛКА_DE_2">Präsentation</a></td></tr>
+<tr><td>3</td><td><a href="ССЫЛКА_DE_3">Montageanleitung</a></td></tr>
+<tr><td>4</td><td><a href="ССЫЛКА_DE_4">Einstellungen</a></td></tr>
+<tr><td>5</td><td><a href="ССЫЛКА_DE_5">Technischer Pass</a></td></tr>
+<tr><td>6</td><td><a href="ССЫЛКА_DE_6">Geräteanalyse</a></td></tr>
+<tr><td>7</td><td><a href="ССЫЛКА_DE_7">Sicherheitsvorschriften</a></td></tr>
+<tr><td>8</td><td><a href="ССЫЛКА_DE_8">Labortests</a></td></tr>
+
+</table>
+
+</div>
+
+<!-- АНГЛИЙСКИЙ -->
+
+<div id="en" class="langblock">
+
+<h2>Documentation</h2>
+
+<table>
+
+<tr>
+<th>No.</th>
+<th>Document</th>
+</tr>
+
+<tr><td>1</td><td><a href="https://docs.google.com/spreadsheets/d/1KzjSjHYSwVvcxfbqqMvj22uBuWHiUDtmA0EIOl1c5EY/edit?gid=2100774615#gid=2100774615">Explanatory Note</a></td></tr>
+
+<tr><td>2</td><td><a href="https://docs.google.com/spreadsheets/d/1KzjSjHYSwVvcxfbqqMvj22uBuWHiUDtmA0EIOl1c5EY/edit?gid=1596013439#gid=1596013439">Presentation</a></td></tr>
+
+<tr><td>3</td><td><a href="https://docs.google.com/spreadsheets/d/1KzjSjHYSwVvcxfbqqMvj22uBuWHiUDtmA0EIOl1c5EY/edit?gid=914677166#gid=914677166">Assembly Instructions</a></td></tr>
+
+<tr><td>4</td><td><a href="https://docs.google.com/spreadsheets/d/1KzjSjHYSwVvcxfbqqMvj22uBuWHiUDtmA0EIOl1c5EY/edit?gid=1871124959#gid=1871124959">Setup and Adjustment</a></td></tr>
+
+<tr><td>5</td><td><a href="https://docs.google.com/spreadsheets/d/1KzjSjHYSwVvcxfbqqMvj22uBuWHiUDtmA0EIOl1c5EY/edit?gid=669726766#gid=669726766">Technical Passport</a></td></tr>
+
+<tr><td>6</td><td><a href="https://docs.google.com/spreadsheets/d/1KzjSjHYSwVvcxfbqqMvj22uBuWHiUDtmA0EIOl1c5EY/edit?gid=256876446#gid=256876446">Equipment Analysis</a></td></tr>
+
+<tr><td>7</td><td><a href="https://docs.google.com/spreadsheets/d/1KzjSjHYSwVvcxfbqqMvj22uBuWHiUDtmA0EIOl1c5EY/edit?gid=2064227844#gid=2064227844">Safety Requirements</a></td></tr>
+
+<tr><td>8</td><td><a href="https://docs.google.com/spreadsheets/d/1KzjSjHYSwVvcxfbqqMvj22uBuWHiUDtmA0EIOl1c5EY/edit?gid=1787242981#gid=1787242981">Laboratory Tests</a></td></tr>
+
+</table>
+
+</div>
+
+<div class="video">
+
+<h2>Video 1</h2>
+
+<iframe width="560" height="315"
+src="https://www.youtube.com/embed/ВСТАВИТЬ_КОД_ПЕРВОГО_КЛИПА"
+allowfullscreen>
+</iframe>
+
+</div>
+
+<div class="video">
+
+<h2>Video 2</h2>
+
+<iframe width="560" height="315"
+src="https://www.youtube.com/embed/ВСТАВИТЬ_КОД_ВТОРОГО_КЛИПА"
+allowfullscreen>
+</iframe>
+
+</div>
+
+<footer>
+© 2026 Mountain Ski Simulator
+</footer>
+
+</body>
+</html>
 
 
 
