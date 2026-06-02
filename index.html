@@ -1,279 +1,312 @@
+
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Mountain Ski Simulator</title>
 
 <style>
+
 body{
-font-family:Arial,sans-serif;
 margin:0;
-padding:0;
-background:#f4f6f9;
+font-family:Arial,sans-serif;
+background:#f2f2f2;
 color:#222;
 }
 
-header{
-background:#1e3c72;
+.hero{
+background:linear-gradient(to right,#1e3c72,#2a5298);
 color:white;
 text-align:center;
-padding:20px;
+padding:50px 20px;
 }
 
-marquee{
-background:#ffeb3b;
-padding:10px;
-font-size:18px;
+.slider-text{
+position:relative;
+height:160px;
+overflow:hidden;
+margin-bottom:30px;
+font-size:24px;
+font-weight:bold;
+text-align:center;
+}
+
+.slide{
+position:absolute;
+width:100%;
+opacity:0;
+left:0;
+  top:0
+animation:slideShow 16s infinite;
+}
+
+.english{
+color:lightblue;
+animation-delay:0s;
+}
+
+.german{
+color:yellow;
+animation-delay:4s;
+}
+
+.ukrainian{
+color:lightgreen;
+animation-delay:8s;
+}
+
+.russian{
+color:white;
+animation-delay:12s;
+}
+
+@keyframes slideShow{
+
+0%{
+opacity:0;
+transform:translateY(30px);
+}
+
+5%{
+opacity:1;
+transform:translateY(0);
+}
+
+20%{
+opacity:1;
+transform:translateY(0);
+}
+
+25%{
+opacity:0;
+transform:translateY(-30px);
+}
+
+100%{
+opacity:0;
+}
+
+}
+
+.container{
+max-width:1100px;
+margin:auto;
+background:white;
+padding:30px;
+}
+
+.btn{
+display:inline-block;
+padding:14px 24px;
+background:orange;
+color:white;
+text-decoration:none;
+border-radius:6px;
+margin:10px;
 font-weight:bold;
 }
 
-.lang-buttons{
-text-align:center;
-margin:20px;
-}
-
-.lang-buttons button{
-padding:10px 20px;
-margin:5px;
-font-size:16px;
-cursor:pointer;
-border:none;
-border-radius:5px;
-background:#1e3c72;
-color:white;
-}
-
-.langblock{
-display:none;
-padding:20px;
-max-width:1200px;
-margin:auto;
-background:white;
+.btn:hover{
+background:#ff8800;
 }
 
 table{
 width:100%;
 border-collapse:collapse;
 margin-top:20px;
+background:white;
+}
+
+th,td{
+border:1px solid #000;
+padding:10px;
+text-align:left;
 }
 
 th{
 background:#1e3c72;
 color:white;
-padding:12px;
-border:1px solid #999;
-}
-
-td{
-padding:12px;
-border:1px solid #999;
-}
-
-a{
-color:#003399;
-font-weight:bold;
-text-decoration:none;
 }
 
 .video{
 text-align:center;
-margin:30px 0;
+margin-top:40px;
 }
 
 iframe{
 max-width:100%;
 }
 
-footer{
-background:#1e3c72;
+.footer{
+background:#222;
 color:white;
 text-align:center;
 padding:20px;
-margin-top:30px;
+margin-top:40px;
 }
+
 </style>
-
-<script>
-function showLang(lang){
-
-document.querySelectorAll('.langblock')
-.forEach(el=>el.style.display='none');
-
-document.getElementById(lang).style.display='block';
-}
-
-window.onload=function(){
-showLang('ru');
-}
-</script>
 
 </head>
 
 <body>
 
-<marquee>
-Я чайник, несусь с горы как булыжник, но тот который во мне сидит, считает что я горнолыжник.
-|
-Я чайник, мчу з гори як камінь, але той, хто сидить усередині мене, вважає себе лижником.
-|
-Ich bin ein Teekessel, ich rase den Berg hinunter wie ein Felsbrocken, aber derjenige in mir hält sich für einen Skifahrer.
-|
-I'm a kettle rushing down the mountain like a boulder, but the one inside me thinks he's a skier.
-</marquee>
+<div class="hero">
 
-<header>
+<div class="slider-text">
+
+<div class="slide english">
+I am a teapot rushing down the mountain like a stone, but the one inside me believes I am an alpine skier.
+</div>
+
+<div class="slide german">
+Ich bin ein Teekessel, der wie ein Stein den Berg hinunterrast, aber derjenige in mir glaubt, dass ich ein alpiner Skifahrer bin.
+</div>
+
+<div class="slide ukrainian">
+Я чайник, що мчить з гори як камінь, але той, хто всередині мене, вважає, що я гірськолижник.
+</div>
+
+<div class="slide russian">
+Я чайник, несусь с горы как булыжник, но тот, который во мне сидит, считает что я горнолыжник.
+</div>
+
+</div>
+
 <h1>Mountain Ski Simulator</h1>
-<h2>Professional Ski Training Simulator</h2>
-</header>
 
-<div class="lang-buttons">
-<button onclick="showLang('ru')">Русский</button>
-<button onclick="showLang('ua')">Українська</button>
-<button onclick="showLang('de')">Deutsch</button>
-<button onclick="showLang('en')">English</button>
+<p>
+Профессиональный тренажёр для подготовки горнолыжников
+</p>
+
+<a class="btn" href="tel:+380984470332">
+Позвонить
+</a>
+
 </div>
 
-<!-- РУССКИЙ -->
+<div class="container">
 
-<div id="ru" class="langblock">
-
-<h2>Документация</h2>
+<h2>9 преимуществ тренажёра</h2>
 
 <table>
 
 <tr>
 <th>№</th>
-<th>Документ</th>
+<th>Преимущество</th>
 </tr>
-
-<tr><td>1</td><td><a href="ССЫЛКА_РУС_ПОЯСНИТЕЛЬНАЯ">Пояснительная записка</a></td></tr>
-<tr><td>2</td><td><a href="ССЫЛКА_РУС_ПРЕЗЕНТАЦИЯ">Презентация</a></td></tr>
-<tr><td>3</td><td><a href="ССЫЛКА_РУС_СБОРКА">Инструкция по сборке</a></td></tr>
-<tr><td>4</td><td><a href="ССЫЛКА_РУС_НАСТРОЙКА">Настройка тренажёра</a></td></tr>
-<tr><td>5</td><td><a href="ССЫЛКА_РУС_ТЕХПАСПОРТ">Технический паспорт</a></td></tr>
-<tr><td>6</td><td><a href="ССЫЛКА_РУС_АНАЛИЗ">Анализ оборудования</a></td></tr>
-<tr><td>7</td><td><a href="ССЫЛКА_РУС_ТБ">Техника безопасности</a></td></tr>
-<tr><td>8</td><td><a href="ССЫЛКА_РУС_ИСПЫТАНИЯ">Лабораторные испытания</a></td></tr>
-
-</table>
-
-</div>
-
-<!-- УКРАИНСКИЙ -->
-
-<div id="ua" class="langblock">
-
-<h2>Документація</h2>
-
-<table>
 
 <tr>
-<th>№</th>
-<th>Документ</th>
+<td>1</td>
+<td>Регулировка нагрузки</td>
 </tr>
-
-<tr><td>1</td><td><a href="ССЫЛКА_УКР_1">Пояснювальна записка</a></td></tr>
-<tr><td>2</td><td><a href="ССЫЛКА_УКР_2">Презентація</a></td></tr>
-<tr><td>3</td><td><a href="ССЫЛКА_УКР_3">Інструкція зі складання</a></td></tr>
-<tr><td>4</td><td><a href="ССЫЛКА_УКР_4">Налаштування тренажера</a></td></tr>
-<tr><td>5</td><td><a href="ССЫЛКА_УКР_5">Технічний паспорт</a></td></tr>
-<tr><td>6</td><td><a href="ССЫЛКА_УКР_6">Аналіз обладнання</a></td></tr>
-<tr><td>7</td><td><a href="ССЫЛКА_УКР_7">Техніка безпеки</a></td></tr>
-<tr><td>8</td><td><a href="ССЫЛКА_УКР_8">Лабораторні випробування</a></td></tr>
-
-</table>
-
-</div>
-
-<!-- НЕМЕЦКИЙ -->
-
-<div id="de" class="langblock">
-
-<h2>Dokumentation</h2>
-
-<table>
 
 <tr>
-<th>Nr.</th>
-<th>Dokument</th>
+<td>2</td>
+<td>Выбор амплитуды поворотов</td>
 </tr>
-
-<tr><td>1</td><td><a href="ССЫЛКА_DE_1">Erläuterungsbericht</a></td></tr>
-<tr><td>2</td><td><a href="ССЫЛКА_DE_2">Präsentation</a></td></tr>
-<tr><td>3</td><td><a href="ССЫЛКА_DE_3">Montageanleitung</a></td></tr>
-<tr><td>4</td><td><a href="ССЫЛКА_DE_4">Einstellungen</a></td></tr>
-<tr><td>5</td><td><a href="ССЫЛКА_DE_5">Technischer Pass</a></td></tr>
-<tr><td>6</td><td><a href="ССЫЛКА_DE_6">Geräteanalyse</a></td></tr>
-<tr><td>7</td><td><a href="ССЫЛКА_DE_7">Sicherheitsvorschriften</a></td></tr>
-<tr><td>8</td><td><a href="ССЫЛКА_DE_8">Labortests</a></td></tr>
-
-</table>
-
-</div>
-
-<!-- АНГЛИЙСКИЙ -->
-
-<div id="en" class="langblock">
-
-<h2>Documentation</h2>
-
-<table>
 
 <tr>
-<th>No.</th>
-<th>Document</th>
+<td>3</td>
+<td>Настройка крутизны поворотов</td>
 </tr>
 
-<tr><td>1</td><td><a href="https://docs.google.com/spreadsheets/d/1KzjSjHYSwVvcxfbqqMvj22uBuWHiUDtmA0EIOl1c5EY/edit?gid=2100774615#gid=2100774615">Explanatory Note</a></td></tr>
+<tr>
+<td>4</td>
+<td>Тренировка закантовки</td>
+</tr>
 
-<tr><td>2</td><td><a href="https://docs.google.com/spreadsheets/d/1KzjSjHYSwVvcxfbqqMvj22uBuWHiUDtmA0EIOl1c5EY/edit?gid=1596013439#gid=1596013439">Presentation</a></td></tr>
+<tr>
+<td>5</td>
+<td>Отработка разножки</td>
+</tr>
 
-<tr><td>3</td><td><a href="https://docs.google.com/spreadsheets/d/1KzjSjHYSwVvcxfbqqMvj22uBuWHiUDtmA0EIOl1c5EY/edit?gid=914677166#gid=914677166">Assembly Instructions</a></td></tr>
+<tr>
+<td>6</td>
+<td>Поднятие пятки</td>
+</tr>
 
-<tr><td>4</td><td><a href="https://docs.google.com/spreadsheets/d/1KzjSjHYSwVvcxfbqqMvj22uBuWHiUDtmA0EIOl1c5EY/edit?gid=1871124959#gid=1871124959">Setup and Adjustment</a></td></tr>
+<tr>
+<td>7</td>
+<td>Компактные размеры</td>
+</tr>
 
-<tr><td>5</td><td><a href="https://docs.google.com/spreadsheets/d/1KzjSjHYSwVvcxfbqqMvj22uBuWHiUDtmA0EIOl1c5EY/edit?gid=669726766#gid=669726766">Technical Passport</a></td></tr>
+<tr>
+<td>8</td>
+<td>Вес от 34 кг</td>
+</tr>
 
-<tr><td>6</td><td><a href="https://docs.google.com/spreadsheets/d/1KzjSjHYSwVvcxfbqqMvj22uBuWHiUDtmA0EIOl1c5EY/edit?gid=256876446#gid=256876446">Equipment Analysis</a></td></tr>
-
-<tr><td>7</td><td><a href="https://docs.google.com/spreadsheets/d/1KzjSjHYSwVvcxfbqqMvj22uBuWHiUDtmA0EIOl1c5EY/edit?gid=2064227844#gid=2064227844">Safety Requirements</a></td></tr>
-
-<tr><td>8</td><td><a href="https://docs.google.com/spreadsheets/d/1KzjSjHYSwVvcxfbqqMvj22uBuWHiUDtmA0EIOl1c5EY/edit?gid=1787242981#gid=1787242981">Laboratory Tests</a></td></tr>
+<tr>
+<td>9</td>
+<td>Подходит для тренировок дома, в спортзале и на горе</td>
+</tr>
 
 </table>
 
-</div>
+<h2>Таблица функций тренажёра</h2>
+
+<p>
+Вставьте сюда iframe из Google Sheets после публикации таблицы.
+</p>
 
 <div class="video">
 
-<h2>Video 1</h2>
+<h2>Видео тренажёра</h2>
 
-<iframe width="560" height="315"
-src="https://www.youtube.com/embed/ВСТАВИТЬ_КОД_ПЕРВОГО_КЛИПА"
+<iframe width="700"
+height="400"
+src="https://www.youtube.com/embed/RfePzRftS3c"
+frameborder="0"
+allowfullscreen>
+</iframe>
+
+<br><br>
+
+<iframe width="700"
+height="400"
+src="https://www.youtube.com/embed/bsklQFk3cfE"
+frameborder="0"
 allowfullscreen>
 </iframe>
 
 </div>
 
-<div class="video">
-
-<h2>Video 2</h2>
-
-<iframe width="560" height="315"
-src="https://www.youtube.com/embed/ВСТАВИТЬ_КОД_ВТОРОГО_КЛИПА"
-allowfullscreen>
-</iframe>
-
 </div>
 
-<footer>
-© 2026 Mountain Ski Simulator
-</footer>
+<div class="footer">
+
+Mountain Ski Simulator © 2026
+
+</div>
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
