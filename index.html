@@ -22,12 +22,40 @@
 <style>
 
 body{
+  <div class="marquee">
+<span>
+Я чайник, несусь с горы как булыжник, но тот который во мне сидит считает что я горнолыжник |
+I am a beginner rushing down the mountain like a boulder, but the one inside me thinks he is a skier |
+Ich bin ein Anfänger und rase den Berg hinunter wie ein Felsbrocken, aber der in mir glaubt, er sei ein Skifahrer |
+Я новачок, мчу з гори як камінь, але той хто сидить у мені вважає себе гірськолижником
+</span>
+</div>
 margin:0;
 font-family:Arial,sans-serif;
 background:#f2f2f2;
 color:#222;
 }
+.marquee{
+width:100%;
+overflow:hidden;
+background:#ffeb3b;
+color:#000;
+padding:10px 0;
+white-space:nowrap;
+box-sizing:border-box;
+}
 
+.marquee span{
+display:inline-block;
+padding-left:100%;
+animation:marquee 25s linear infinite;
+font-weight:bold;
+}
+
+@keyframes marquee{
+0%{transform:translateX(0);}
+100%{transform:translateX(-100%);}
+}
 .hero{
 background:linear-gradient(to right,#1e3c72,#2a5298);
 color:white;
